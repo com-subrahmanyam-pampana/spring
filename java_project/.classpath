@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="lib/apache_common_logging.jar"/>
 	<classpathentry kind="lib" path="lib/spring_beans.jar"/>
 	<classpathentry kind="lib" path="lib/spring_core.jar"/>
+	<classpathentry kind="lib" path="lib/spring-expression.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

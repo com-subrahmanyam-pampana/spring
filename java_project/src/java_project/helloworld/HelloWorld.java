@@ -1,4 +1,4 @@
-package java_project;
+package java_project.helloworld;
 
 public class HelloWorld {
     private String message;
