@@ -1,10 +1,9 @@
-package java_project.alarmexample.withAnnotation;
+package java_project.alarmexample.configbasedbeans;
 
 
-import org.springframework.stereotype.Component;
 
-@Component("")
-public class SoundAlarm2  implements  Alarm2{
+
+public class SoundAlarm5  implements Alarm5 {
 
     @Override
     public void activate() {

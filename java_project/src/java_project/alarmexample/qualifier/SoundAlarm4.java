@@ -1,10 +1,10 @@
-package java_project.alarmexample.withAnnotation;
+package java_project.alarmexample.qualifier;
 
 
 import org.springframework.stereotype.Component;
 
-@Component("")
-public class SoundAlarm2  implements  Alarm2{
+@Component("soundAlarm4")
+public class SoundAlarm4  implements Alarm4 {
 
     @Override
     public void activate() {

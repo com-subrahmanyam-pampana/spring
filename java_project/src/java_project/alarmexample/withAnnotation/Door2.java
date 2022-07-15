@@ -1,6 +1,5 @@
 package java_project.alarmexample.withAnnotation;
 
-import java_project.alarmexample.Alarm;
 
 public class Door2 {
     private Alarm2 alarm;
