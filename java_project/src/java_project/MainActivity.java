@@ -2,6 +2,8 @@ package java_project;
 
 
 import java_project.alarmexample.Door;
+import java_project.alarmexample.withAnnotation.Alarm2;
+import java_project.alarmexample.withAnnotation.Door2;
 import java_project.entityexample.UserEntity;
 import java_project.helloworld.HelloWorld;
 import java_project.hibernate.EmployeeEntity;
@@ -33,7 +35,25 @@ public class MainActivity  extends  Throwable{
 		obj.getMessage();
 	}
 
-	public static  void alarmExampleTest() {
+	public static  void alarmExampleTestWithAnnotations() {
+		ApplicationContext context=new FileSystemXmlApplicationContext("classpath:componentscan.xml");
+
+
+		Alarm2 soundAlarm=context.getBean("soundAlarmBean",Alarm2.class);
+		Door2 doorWithSoundAlarm=new Door2();
+		doorWithSoundAlarm.setAlarm(soundAlarm);
+		doorWithSoundAlarm.open();
+		doorWithSoundAlarm.close();
+
+		Alarm2 visualAlarm=context.getBean("visualAlarmBean",Alarm2.class);
+		Door2 doorWithVisualAlarm=new Door2();
+		doorWithVisualAlarm.setAlarm(visualAlarm);
+		doorWithVisualAlarm.open();
+		doorWithVisualAlarm.close();
+
+	}
+
+	public static  void alarmExampleTestWithXMLConfig() {
 		ApplicationContext context=new FileSystemXmlApplicationContext("classpath:alarmbeans.xml");
 		Door door=context.getBean("doorBeanWithSoundAlarm",Door.class);
 		door.open();
@@ -103,7 +123,10 @@ public class MainActivity  extends  Throwable{
 	}
 	public static void main(String[] args) {
 		//helloWorld();
-		alarmExampleTest();
+		//alarmExampleTestWithXMLConfig();
+
+		/**/
+		alarmExampleTestWithAnnotations();
 		//demoRepository();
 		//userEntity();
 	}
