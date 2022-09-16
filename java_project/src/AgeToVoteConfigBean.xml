@@ -5,8 +5,8 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id = "helloWorld" class = "java_project.A_xml_based_config.a_helloworld.HelloWorld">
-        <property name = "message" value = "Hello World!"/>
+    <bean id = "ageToVoteConfig" class = "java_project.B_basics.a_agetovote.AgeToVoteConfig">
+
     </bean>
 
 </beans>
